@@ -1,0 +1,18 @@
+@mixin flex-setup($direction, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin text-color-gradient {
+    background: -webkit-linear-gradient(rgba(244, 92, 67, 1), rgba(235, 51, 73, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin background{
+    background: rgb(244, 92, 67);
+    background: linear-gradient(180deg, rgba(244, 92, 67, 1) 0%, rgba(235, 51, 73, 1) 100%);
+    background-repeat: no-repeat;
+}

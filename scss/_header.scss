@@ -1,0 +1,29 @@
+body {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        @include background();
+
+        height: 100vh;
+
+        h1 {
+            color: white;
+            font-size: clamp(2.5rem, 10vw, 5rem);
+        }
+
+        img {
+            width: clamp(3rem, 10vw, 4rem);
+        }
+
+        .logo {
+            padding-top: 2rem;
+        }
+
+        .arrow-down {
+            padding-bottom: 2rem;
+        }
+    }
+}

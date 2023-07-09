@@ -1,0 +1,544 @@
+body header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(244, 92, 67);
+  background: linear-gradient(180deg, rgb(244, 92, 67) 0%, rgb(235, 51, 73) 100%);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+body header h1 {
+  color: white;
+  font-size: clamp(2.5rem, 10vw, 5rem);
+}
+body header img {
+  width: clamp(3rem, 10vw, 4rem);
+}
+body header .logo {
+  padding-top: 2rem;
+}
+body header .arrow-down {
+  padding-bottom: 2rem;
+}
+
+body main .about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .about-me h2 {
+  font-size: clamp(1.6rem, 3vw, 3rem);
+  text-align: center;
+  margin: clamp(1rem, 3vw, 3rem);
+  background: -webkit-linear-gradient(rgb(244, 92, 67), rgb(235, 51, 73));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body main .about-me .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .about-me .content img {
+  width: clamp(10rem, 15vw, 15rem);
+  border-radius: clamp(7rem, 20vw, 15rem);
+  border: 0.5rem solid rgb(244, 92, 67);
+}
+body main .about-me .content article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: clamp(20rem, 5vw, 30rem);
+}
+body main .about-me .content article h3,
+body main .about-me .content article p {
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  text-align: center;
+  background: -webkit-linear-gradient(rgb(244, 92, 67), rgb(235, 51, 73));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body main .about-me .content article .revealUp {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 1050px) {
+  body main .about-me .content {
+    display: grid;
+    grid-template-columns: 20rem 20rem 20rem;
+    gap: clamp(1rem, 1vw, 10rem);
+    grid-template-rows: 1fr 1fr;
+  }
+  body main .about-me .content .about-me {
+    margin: 0 auto;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  body main .about-me .content img {
+    margin: 0 auto;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  body main .about-me .content .education {
+    margin: 0 auto;
+    grid-column: 3;
+    grid-row: 1;
+  }
+  body main .about-me .content .expirience {
+    margin: 0 auto;
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+body .my-skills h1,
+body .my-skills h2,
+body .my-skills h3,
+body .my-skills h4,
+body .my-skills p,
+body .my-skills a {
+  margin: 0;
+  text-align: center;
+}
+body .my-skills .header {
+  background: rgb(244, 92, 67);
+  background: linear-gradient(180deg, rgb(244, 92, 67) 0%, rgb(235, 51, 73) 100%);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10rem;
+  color: white;
+  font-size: 2rem;
+}
+body .my-skills .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .my-skills .content .profile-img {
+  display: none;
+}
+body .my-skills .content .content-header {
+  background: -webkit-linear-gradient(rgb(244, 92, 67), rgb(235, 51, 73));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 2rem 0rem 2rem 0rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+body .my-skills .content .my-skills-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+body .my-skills .content .my-skills-section h4 {
+  background: -webkit-linear-gradient(rgb(244, 92, 67), rgb(235, 51, 73));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  padding-bottom: 0.5rem;
+}
+body .my-skills .content .my-skills-section p {
+  font-size: 1.4rem;
+  width: 17rem;
+}
+body .my-skills .content .my-skills-section ul {
+  display: none;
+}
+body .my-skills .content .my-skills-section .footer {
+  font-size: 1rem;
+}
+body .my-skills .content .my-skills-section .ratings .rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+body .my-skills .content .my-skills-section .ratings .rating .lang {
+  font-size: 1.6rem;
+  margin: 0.2rem;
+  margin-right: 0.6rem;
+}
+body .my-skills .content .my-skills-section .ratings .rating .dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+body .my-skills .content .my-skills-section .ratings .rating .dots .dot {
+  background: rgb(244, 92, 67);
+  background: linear-gradient(180deg, rgb(244, 92, 67) 0%, rgb(235, 51, 73) 100%);
+  background-repeat: no-repeat;
+  margin: 0.2rem;
+  border-radius: 1rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+body .my-skills .content .my-skills-section .ratings .rating .dots .empty-dot {
+  border: 0.1rem solid rgb(244, 92, 67);
+  margin: 0.2rem;
+  border-radius: 1rem;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+body .my-skills .content .contacts-article {
+  display: none;
+}
+
+@media screen and (min-width: 1050px) {
+  body .my-skills .header {
+    height: 20rem;
+    font-size: 4rem;
+  }
+  body .my-skills .content {
+    display: grid;
+    grid-template-columns: 25rem 25rem auto;
+    grid-template-rows: 1fr 15rem 1fr;
+  }
+  body .my-skills .content .my-skills-section {
+    align-items: start;
+  }
+  body .my-skills .content .my-skills-section h4, body .my-skills .content .my-skills-section p {
+    text-align: start;
+  }
+  body .my-skills .content .profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 6rem;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  body .my-skills .content .profile .profile-img {
+    display: block;
+    width: 10rem;
+    margin-right: 2rem;
+    border-radius: 10rem;
+    border: 0.5rem solid rgb(244, 92, 67);
+  }
+  body .my-skills .content .contacts-article {
+    display: flex;
+    flex-direction: row;
+    padding-top: 9rem;
+    justify-content: end;
+    align-items: center;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row: 1;
+  }
+  body .my-skills .content .contacts-article p {
+    width: auto;
+    text-align: start;
+    line-height: 3rem;
+    padding-left: 2rem;
+  }
+  body .my-skills .content .education {
+    grid-column: 1;
+    grid-row: 2;
+    padding-top: 1.5rem;
+    justify-content: start;
+    align-items: start;
+  }
+  body .my-skills .content .education h4 {
+    text-align: start;
+  }
+  body .my-skills .content .education p {
+    text-align: start;
+    width: 20rem;
+    font-size: 1.6rem;
+  }
+  body .my-skills .content .expirience {
+    grid-column: 2;
+    grid-row: 2/4;
+    align-items: start;
+    justify-content: start;
+  }
+  body .my-skills .content .expirience ul {
+    display: block;
+  }
+  body .my-skills .content .expirience ul li {
+    width: 20rem;
+    font-size: 1.4rem;
+  }
+  body .my-skills .content .expirience p {
+    width: auto;
+    font-size: 1.8rem;
+  }
+  body .my-skills .content .expirience .footer {
+    font-size: 1.2rem;
+  }
+  body .my-skills .content .language {
+    margin-top: 6rem;
+    align-items: start;
+    justify-content: start;
+    grid-column: 3;
+    grid-row: 2;
+  }
+  body .my-skills .content .language p {
+    font-size: 1.8rem;
+  }
+  body .my-skills .content .language .footer {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  body .my-skills .content .programming {
+    align-items: start;
+    grid-column: 1;
+    grid-row: 3;
+  }
+  body .my-skills .content .programming .rating {
+    margin: 1rem;
+    margin-left: -3rem;
+  }
+  body .my-skills .content .interest {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  body .my-skills .content .interest p {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1500px) {
+  body .my-skills .header {
+    height: 20rem;
+    font-size: 4rem;
+  }
+  body .my-skills .content {
+    display: grid;
+    grid-template-columns: 30rem 30rem auto;
+    grid-template-rows: 1fr 15rem 1fr;
+  }
+  body .my-skills .content .my-skills-section {
+    align-items: start;
+  }
+  body .my-skills .content .my-skills-section h4, body .my-skills .content .my-skills-section p {
+    text-align: start;
+  }
+  body .my-skills .content .profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 6rem;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  body .my-skills .content .profile .profile-img {
+    display: block;
+    width: 10rem;
+    margin-right: 2rem;
+    border-radius: 10rem;
+    border: 0.5rem solid rgb(244, 92, 67);
+  }
+  body .my-skills .content .contacts-article {
+    display: flex;
+    flex-direction: row;
+    padding-top: 9rem;
+    justify-content: end;
+    align-items: center;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row: 1;
+  }
+  body .my-skills .content .contacts-article p {
+    width: auto;
+    text-align: start;
+    line-height: 3rem;
+    padding-left: 2rem;
+  }
+  body .my-skills .content .education {
+    grid-column: 1;
+    grid-row: 2;
+    padding-top: 1.5rem;
+    justify-content: start;
+    align-items: start;
+  }
+  body .my-skills .content .education h4 {
+    text-align: start;
+  }
+  body .my-skills .content .education p {
+    text-align: start;
+    width: 25rem;
+    font-size: 1.6rem;
+  }
+  body .my-skills .content .expirience {
+    grid-column: 2;
+    grid-row: 2/4;
+    align-items: start;
+    justify-content: start;
+  }
+  body .my-skills .content .expirience ul {
+    display: block;
+  }
+  body .my-skills .content .expirience ul li {
+    width: 20rem;
+    font-size: 1.4rem;
+  }
+  body .my-skills .content .expirience p {
+    width: auto;
+    font-size: 1.8rem;
+  }
+  body .my-skills .content .expirience .footer {
+    font-size: 1.2rem;
+  }
+  body .my-skills .content .language {
+    margin-top: 6rem;
+    align-items: start;
+    justify-content: start;
+    grid-column: 3;
+    grid-row: 2;
+  }
+  body .my-skills .content .language p {
+    font-size: 1.8rem;
+  }
+  body .my-skills .content .language .footer {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  body .my-skills .content .programming {
+    align-items: start;
+    grid-column: 1;
+    grid-row: 3;
+  }
+  body .my-skills .content .programming .rating {
+    margin: 1rem;
+    margin-left: -3rem;
+  }
+  body .my-skills .content .interest {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  body .my-skills .content .interest p {
+    font-size: 1.6rem;
+  }
+}
+body .my-work .header {
+  background: rgb(244, 92, 67);
+  background: linear-gradient(180deg, rgb(244, 92, 67) 0%, rgb(235, 51, 73) 100%);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10rem;
+  color: white;
+  font-size: 2rem;
+}
+body .my-work .content .equipay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(239, 239, 239);
+  text-align: center;
+  margin: 2rem;
+  padding: 1rem;
+}
+body .my-work .content .equipay img {
+  width: 7rem;
+  margin-bottom: 1rem;
+}
+body .my-work .content .equipay p {
+  width: 15rem;
+  margin: 0.5rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin-bottom: 1rem;
+}
+body .my-work .content .equipay span {
+  color: rgb(200, 0, 215);
+}
+body .my-work .content .equipay .team-member {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  margin-left: 1rem;
+}
+body .my-work .content .equipay .team-member .circle {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: purple;
+  border-radius: 1rem;
+  margin-right: 0.3rem;
+}
+body .my-work .content .equipay .team-member p {
+  margin: 0;
+  width: auto;
+  font-size: 1.2rem;
+}
+body .my-work .content .equipay .team-member span {
+  color: red;
+}
+
+@media screen and (min-width: 1050px) {
+  body .my-work .header {
+    height: 20rem;
+    font-size: 4rem;
+  }
+  body .my-work .content .equipay {
+    align-items: start;
+  }
+  body .my-work .content .equipay .text {
+    text-align: start;
+  }
+  body .my-work .content .equipay .text img {
+    width: 10rem;
+  }
+  body .my-work .content .equipay .text p {
+    width: 35rem;
+    text-align: start;
+  }
+  body .my-work .content .equipay .text .team-member {
+    justify-content: start;
+  }
+}
+body footer {
+  background: rgb(244, 92, 67);
+  background: linear-gradient(180deg, rgb(244, 92, 67) 0%, rgb(235, 51, 73) 100%);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.4rem;
+}
+body footer h2,
+body footer p {
+  color: white;
+  margin: 0.3rem;
+}
+body footer h2 {
+  font-size: clamp(2rem, 2vw, 3rem);
+  padding-bottom: 0.6rem;
+}
+body footer p {
+  font-size: clamp(1.4rem, 2vw, 2.4rem);
+}
+
+html {
+  font-family: "Poiret One", cursive;
+  scroll-behavior: smooth;
+}
+html body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+html body a {
+  text-decoration: none;
+}/*# sourceMappingURL=styles.css.map */

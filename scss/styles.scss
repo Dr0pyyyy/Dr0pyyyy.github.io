@@ -1,0 +1,21 @@
+@import "./mixin";
+@import "./header";
+@import "./about-me";
+@import "./my-skills";
+@import "./my-work";
+@import "./footer";
+
+html {
+    font-family: "Poiret One", cursive;
+    scroll-behavior: smooth;
+
+    body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+
+        a{
+            text-decoration: none;
+        }
+    }
+}

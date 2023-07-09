@@ -1,0 +1,103 @@
+body {
+    .my-work {
+
+        .header {
+            @include background();
+            @include flex-setup(column, center);
+
+            width: 100vw;
+            height: 10rem;
+
+            color: white;
+            font-size: 2rem;
+        }
+
+        .content {
+            .equipay {
+                @include flex-setup(column, center);
+
+                background-color: rgb(239, 239, 239);
+                text-align: center;
+                margin: 2rem;
+                padding: 1rem;
+
+                img {
+                    width: 7rem;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    width: 15rem;
+                    margin: 0.5rem;
+                    font-size: clamp(1.5rem, 5vw, 2rem);
+                    margin-bottom: 1rem
+                }
+
+                span {
+                    color: rgb(200, 0, 215);
+                }
+
+                .team-member {
+                    @include flex-setup(row, center);
+
+                    display: flex;
+                    text-align: center;
+                    margin-left: 1rem;
+
+                    .circle {
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        background-color: purple;
+                        border-radius: 1rem;
+                        margin-right: 0.3rem;
+                    }
+
+                    p {
+                        margin: 0;
+                        width: auto;
+                        font-size: 1.2rem;
+                    }
+
+                    span {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    body {
+        .my-work {
+
+            .header {
+                height: 20rem;
+                font-size: 4rem;
+            }
+
+            .content {
+                .equipay {
+                    align-items: start;
+
+                    .text {
+                        text-align: start;
+
+                        img{
+                            width: 10rem;
+                        }
+
+                        p {
+                            width: 35rem;
+                            text-align: start;
+                        }
+
+                        .team-member{
+                            justify-content: start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

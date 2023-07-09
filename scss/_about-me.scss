@@ -1,0 +1,87 @@
+body {
+    main {
+        .about-me {
+            @include flex-setup(column, center);
+
+            h2 {
+                font-size: clamp(1.6rem, 3vw, 3rem);
+                text-align: center;
+                margin: clamp(1rem, 3vw, 3rem);
+
+                @include text-color-gradient();
+            }
+
+            .content {
+                @include flex-setup(column, center);
+
+                img {
+                    width: clamp(10rem, 15vw, 15rem);
+                    border-radius: clamp(7rem, 20vw, 15rem);
+                    border: 0.5rem solid rgb(244, 92, 67);
+                }
+
+                article {
+                    @include flex-setup(column, center);
+
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    width: clamp(20rem, 5vw, 30rem);
+
+                    h3,
+                    p {
+                        margin: 0;
+                        padding-bottom: 0.5rem;
+
+                        font-size: clamp(1.5rem, 5vw, 2rem);
+                        text-align: center;
+                        @include text-color-gradient();
+                    }
+
+                    .revealUp {
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    body {
+        main {
+            .about-me {
+                .content {
+                    display: grid;
+                    grid-template-columns: 20rem 20rem 20rem;
+                    gap: clamp(1rem, 1vw, 10rem);
+                    grid-template-rows: 1fr 1fr;
+
+                    .about-me {
+                        margin: 0 auto;
+                        grid-column: 1;
+                        grid-row: 1;
+                    }
+
+                    img {
+                        margin: 0 auto;
+                        grid-column: 2;
+                        grid-row: 1;
+                    }
+
+                    .education {
+                        margin: 0 auto;
+                        grid-column: 3;
+                        grid-row: 1;
+                    }
+
+                    .expirience {
+                        margin: 0 auto;
+                        grid-column: 2;
+                        grid-row: 2;
+                    }
+                }
+            }
+        }
+    }
+}
