@@ -3,6 +3,7 @@ body {
         @include background();
         @include flex-setup(column, center);
 
+        margin-top: 3.5rem;
         padding: 1.4rem;
 
         h2,

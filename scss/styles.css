@@ -62,6 +62,13 @@ body main .about-me .content article p {
   padding-bottom: 0.5rem;
   font-size: clamp(1.5rem, 5vw, 2rem);
   text-align: center;
+}
+body main .about-me .content article h3 {
+  background: -webkit-linear-gradient(rgb(244, 92, 67), rgb(235, 51, 73));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body main .about-me .content article a {
   background: -webkit-linear-gradient(rgb(244, 92, 67), rgb(235, 51, 73));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -443,13 +450,14 @@ body .my-work .content .equipay {
   justify-content: center;
   align-items: center;
   background-color: rgb(239, 239, 239);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.205);
   text-align: center;
   margin: 2rem;
   padding: 1rem;
 }
 body .my-work .content .equipay img {
-  width: 7rem;
-  margin-bottom: 1rem;
+  width: 8rem;
 }
 body .my-work .content .equipay p {
   width: 15rem;
@@ -459,6 +467,9 @@ body .my-work .content .equipay p {
 }
 body .my-work .content .equipay span {
   color: rgb(200, 0, 215);
+}
+body .my-work .content .equipay .mock-up {
+  width: 18rem;
 }
 body .my-work .content .equipay .team-member {
   display: flex;
@@ -490,11 +501,23 @@ body .my-work .content .equipay .team-member span {
     height: 20rem;
     font-size: 4rem;
   }
+  body .my-work .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   body .my-work .content .equipay {
-    align-items: start;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 28rem;
+    margin: 0;
   }
   body .my-work .content .equipay .text {
     text-align: start;
+    padding-left: 1rem;
   }
   body .my-work .content .equipay .text img {
     width: 10rem;
@@ -506,6 +529,10 @@ body .my-work .content .equipay .team-member span {
   body .my-work .content .equipay .text .team-member {
     justify-content: start;
   }
+  body .my-work .content .equipay .mock-up {
+    width: 100%;
+    max-width: 40rem;
+  }
 }
 body footer {
   background: rgb(244, 92, 67);
@@ -515,6 +542,7 @@ body footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 3.5rem;
   padding: 1.4rem;
 }
 body footer h2,
@@ -533,6 +561,7 @@ body footer p {
 html {
   font-family: "Poiret One", cursive;
   scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
 }
 html body {
   overflow-x: hidden;
@@ -541,4 +570,5 @@ html body {
 }
 html body a {
   text-decoration: none;
+  color: black;
 }/*# sourceMappingURL=styles.css.map */

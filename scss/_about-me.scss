@@ -34,6 +34,13 @@ body {
 
                         font-size: clamp(1.5rem, 5vw, 2rem);
                         text-align: center;
+                    }
+
+                    h3{
+                        @include text-color-gradient();
+                    }
+
+                    a{
                         @include text-color-gradient();
                     }
 
