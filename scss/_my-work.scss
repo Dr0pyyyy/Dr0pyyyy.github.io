@@ -1,6 +1,5 @@
 body {
     .my-work {
-
         .header {
             @include background();
             @include flex-setup(column, center);
@@ -23,48 +22,83 @@ body {
                 margin: 2rem;
                 padding: 1rem;
 
-                img {
+                .logo {
                     width: 8rem;
+                    order: 0;
+                }
+
+                .serotonin-logo {
+                    width: 14rem;
+                    order: 0;
                 }
 
                 p {
                     width: 15rem;
                     margin: 0.5rem;
                     font-size: clamp(1.5rem, 5vw, 2rem);
-                    margin-bottom: 1rem
+                    margin-bottom: 1rem;
                 }
 
                 span {
                     color: rgb(200, 0, 215);
                 }
 
-                .mock-up{
+
+                .mock-up {
                     width: 18rem;
+                    order: 1;
                 }
 
-                .team-member {
-                    @include flex-setup(row, center);
+                .text {
+                    order: 2;
 
-                    display: flex;
-                    text-align: center;
-                    margin-left: 1rem;
+                    .serotonin-text {
+                        color: rgb(0, 175, 0);
+                    }
+                }
 
-                    .circle {
-                        width: 0.5rem;
-                        height: 0.5rem;
-                        background-color: purple;
-                        border-radius: 1rem;
-                        margin-right: 0.3rem;
+                .credits {
+                    .team-member {
+                        @include flex-setup(row, center);
+
+                        display: flex;
+                        text-align: center;
+                        margin-left: 1rem;
+
+                        .circle {
+                            width: 0.5rem;
+                            height: 0.5rem;
+                            background-color: purple;
+                            border-radius: 1rem;
+                            margin-right: 0.3rem;
+                        }
+
+                        .serotonin-circle{
+                            width: 0.5rem;
+                            height: 0.5rem;
+                            background-color: rgb(0, 175, 0);
+                            border-radius: 1rem;
+                            margin-right: 0.3rem;
+                        }
+
+                        p {
+                            margin: 0;
+                            width: auto;
+                            font-size: 1.2rem;
+                        }
+
+                        .serotonin-circle{
+                            width: 0.5rem;
+                            height: 0.5rem;
+                            background-color: rgb(0, 175, 0);
+                            border-radius: 1rem;
+                            margin-right: 0.3rem;
+                        }
                     }
 
-                    p {
-                        margin: 0;
-                        width: auto;
-                        font-size: 1.2rem;
-                    }
-
-                    span {
-                        color: red;
+                    .github-link {
+                        margin-top: 1rem;
+                        font-size: 1.6rem;
                     }
                 }
             }
@@ -75,7 +109,6 @@ body {
 @media screen and (min-width: 1050px) {
     body {
         .my-work {
-
             .header {
                 height: 20rem;
                 font-size: 4rem;
@@ -85,34 +118,46 @@ body {
                 @include flex-setup(column, center);
 
                 .equipay {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    height: 28rem;
-                    margin: 0;
+                    display: grid;
+                    place-items: center;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 6rem 1fr;
+
+                    .logo {
+                        width: 11rem;
+                    }
+
+                    .serotonin-logo {
+                        width: 18rem;
+                    }
 
                     .text {
                         text-align: start;
                         padding-left: 1rem;
-
-                        img{
-                            width: 10rem;
-                        }
 
                         p {
                             width: 35rem;
                             text-align: start;
                         }
 
-                        .team-member{
+                        .serotonin-text {
+                            color: rgb(0, 175, 0);
+                        }
+
+                        .team-member {
                             justify-content: start;
+                        }
+
+                        .github-link {
+                            text-align: center;
                         }
                     }
 
-                    .mock-up{
+                    .mock-up {
                         width: 100%;
                         max-width: 40rem;
+                        grid-column: 2;
+                        grid-row: span 4;
                     }
                 }
             }

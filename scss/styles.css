@@ -456,8 +456,13 @@ body .my-work .content .equipay {
   margin: 2rem;
   padding: 1rem;
 }
-body .my-work .content .equipay img {
+body .my-work .content .equipay .logo {
   width: 8rem;
+  order: 0;
+}
+body .my-work .content .equipay .serotonin-logo {
+  width: 14rem;
+  order: 0;
 }
 body .my-work .content .equipay p {
   width: 15rem;
@@ -470,8 +475,15 @@ body .my-work .content .equipay span {
 }
 body .my-work .content .equipay .mock-up {
   width: 18rem;
+  order: 1;
 }
-body .my-work .content .equipay .team-member {
+body .my-work .content .equipay .text {
+  order: 2;
+}
+body .my-work .content .equipay .text .serotonin-text {
+  color: rgb(0, 175, 0);
+}
+body .my-work .content .equipay .credits .team-member {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -480,20 +492,35 @@ body .my-work .content .equipay .team-member {
   text-align: center;
   margin-left: 1rem;
 }
-body .my-work .content .equipay .team-member .circle {
+body .my-work .content .equipay .credits .team-member .circle {
   width: 0.5rem;
   height: 0.5rem;
   background-color: purple;
   border-radius: 1rem;
   margin-right: 0.3rem;
 }
-body .my-work .content .equipay .team-member p {
+body .my-work .content .equipay .credits .team-member .serotonin-circle {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: rgb(0, 175, 0);
+  border-radius: 1rem;
+  margin-right: 0.3rem;
+}
+body .my-work .content .equipay .credits .team-member p {
   margin: 0;
   width: auto;
   font-size: 1.2rem;
 }
-body .my-work .content .equipay .team-member span {
-  color: red;
+body .my-work .content .equipay .credits .team-member .serotonin-circle {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: rgb(0, 175, 0);
+  border-radius: 1rem;
+  margin-right: 0.3rem;
+}
+body .my-work .content .equipay .credits .github-link {
+  margin-top: 1rem;
+  font-size: 1.6rem;
 }
 
 @media screen and (min-width: 1050px) {
@@ -508,30 +535,39 @@ body .my-work .content .equipay .team-member span {
     align-items: center;
   }
   body .my-work .content .equipay {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 28rem;
-    margin: 0;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 6rem 1fr;
+  }
+  body .my-work .content .equipay .logo {
+    width: 11rem;
+  }
+  body .my-work .content .equipay .serotonin-logo {
+    width: 18rem;
   }
   body .my-work .content .equipay .text {
     text-align: start;
     padding-left: 1rem;
   }
-  body .my-work .content .equipay .text img {
-    width: 10rem;
-  }
   body .my-work .content .equipay .text p {
     width: 35rem;
     text-align: start;
   }
+  body .my-work .content .equipay .text .serotonin-text {
+    color: rgb(0, 175, 0);
+  }
   body .my-work .content .equipay .text .team-member {
     justify-content: start;
+  }
+  body .my-work .content .equipay .text .github-link {
+    text-align: center;
   }
   body .my-work .content .equipay .mock-up {
     width: 100%;
     max-width: 40rem;
+    grid-column: 2;
+    grid-row: span 4;
   }
 }
 body footer {
